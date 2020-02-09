@@ -1,0 +1,8 @@
+@import 'appSettings';
+
+$color: map-get($app-colors, brand);
+
+$border-radius: $app-border-radius;
+
+$shadow: $app-items-shadow;
+$scale-animation: transform $app-animation-speed ease-in-out;

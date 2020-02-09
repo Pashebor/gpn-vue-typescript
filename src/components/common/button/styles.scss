@@ -1,0 +1,23 @@
+@import 'settings';
+
+.button {
+    font-weight: 600;
+    color: white;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: $button-border-radius;
+
+    padding: 5px 10px;
+
+    box-shadow: $button-shadow;
+
+    &.button--default {
+        background-color: $button-bg-color;
+    }
+
+    &:focus, &:active {
+        outline: none;
+    }
+}

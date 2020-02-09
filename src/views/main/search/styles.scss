@@ -1,0 +1,21 @@
+@import 'settings';
+
+.search {
+    border-radius: $search-border-radius;
+    box-shadow: $search-shadow;
+    
+    line-height: 24px;
+
+    padding: 5px 10px;
+    margin: 10px;
+
+    border: 1px solid black;
+
+    transition: $search-animation;
+
+    &:focus {
+        border: 1px solid $search-focus-color;
+
+        outline: none;
+    }
+}

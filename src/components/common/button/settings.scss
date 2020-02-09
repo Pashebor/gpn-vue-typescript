@@ -1,0 +1,5 @@
+@import 'appSettings';
+
+$button-bg-color: map-get($app-colors, brand);
+$button-border-radius: $app-border-radius;
+$button-shadow: $app-items-shadow;

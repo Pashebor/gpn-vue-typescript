@@ -1,0 +1,5 @@
+@import 'appSettings';
+
+$card-bg-color: map-get($app-colors, tile);
+$card-border-radius: $app-border-radius;
+$card-shadow: $app-items-shadow;

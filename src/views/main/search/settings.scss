@@ -1,0 +1,7 @@
+@import 'appSettings';
+
+$search-border-radius: $app-border-radius;
+$search-shadow: $app-items-shadow;
+
+$search-focus-color: map-get($app-colors, brand);
+$search-animation: border $app-animation-speed ease-in-out;

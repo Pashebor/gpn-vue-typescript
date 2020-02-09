@@ -1,0 +1,19 @@
+.main {
+  .main-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+  }
+
+  .main-block {
+     min-width: 320px;
+
+     width: calc(50% - 20px);
+  }
+
+  .main__search {
+    display: block;
+
+    margin-left: 20px;
+  }
+}
