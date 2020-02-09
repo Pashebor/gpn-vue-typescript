@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --progress & webpack-dev-server",
     "build-dev": "webpack --progress --hide-modules",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build-prod": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "author": "pashebor",
   "license": "ISC",

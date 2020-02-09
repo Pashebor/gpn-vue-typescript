@@ -18,7 +18,7 @@ const bundler = {
     filename: 'app.js'
   },
   optimization: {
-    minimize: true
+    minimize: ENV === 'production'
   },
   mode: ENV,
   module: {
@@ -53,7 +53,7 @@ const bundler = {
                 {
                     loader: MiniCssExtractPlugin.loader,
                     options: {
-                        hmr: process.env.NODE_ENV === 'development',
+                        hmr: ENV === 'development',
                     },
                 },
                 'css-loader',
@@ -75,8 +75,8 @@ const bundler = {
     port: 3000
   },
   stats: 'errors-warnings',
-  watch: true,
-  devtool: '#source-map',
+  watch: ENV === 'development',
+  devtool: ENV === 'development' ? '#source-map' : false,
   plugins: [
       new VueLoaderPlugin(),
       new HtmlWebpackPlugin({
@@ -92,16 +92,5 @@ const bundler = {
 Object.keys(alias).forEach((key) => {
     bundler.resolve.alias[key] = path.resolve(__dirname, alias[key]) 
 });
-
-if (process.env.NODE_ENV === 'production') {
-  bundler.devtool = '#source-map';
-  bundler.plugins = (bundler.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    })
-  ]);
-}
 
 module.exports = bundler;
